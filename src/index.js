@@ -7,7 +7,8 @@ function Tweet() {
     <div className="tweet">
       <Avatar />
       <div className="content">
-        <Message />
+        <Message/>
+        <NameWithHandle/>
       </div>
     </div>
   );
@@ -25,6 +26,15 @@ function Avatar() {
 
 function Message() {
   return <div className="message">This is less than 140 characters.</div>;
+}
+
+function NameWithHandle() {
+  return (
+  <span className="name-with-handle">
+    <span className="name">Your Name</span>
+    <span className="handle">@yourhandle</span>
+  </span>
+  );
 }
 
 ReactDOM.render(<Tweet />, document.querySelector("#root"));
