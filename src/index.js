@@ -6,7 +6,9 @@ function Tweet() {
   return (
     <div className="tweet">
       <Avatar />
-      Tweet
+      <div className="content">
+        <Message />
+      </div>
     </div>
   );
 }
@@ -19,6 +21,10 @@ function Avatar() {
       alt="avatar"
     />
   );
+}
+
+function Message() {
+  return <div className="message">This is less than 140 characters.</div>;
 }
 
 ReactDOM.render(<Tweet />, document.querySelector("#root"));
